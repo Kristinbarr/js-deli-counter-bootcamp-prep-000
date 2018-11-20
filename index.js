@@ -4,6 +4,17 @@ function takeANumber(queue, name) {
   return `Welcome, ${name}. You are number ${position} in line.`;
 }
 
+let ticketNumber = 0;
+function takeANumberAlternate(queue) {
+  ticketNumber++
+  queue.push(ticketNumber)
+  return ticketNumber
+}
+
+function resetTicketNumber() {
+  ticketNumber = 0;
+}
+
 function nowServing(katzDeliLine) {
   if (katzDeliLine.length > 0) {
     let nowServingName = katzDeliLine.shift();
